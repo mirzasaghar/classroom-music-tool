@@ -12,13 +12,13 @@
   header h1 { margin: 0; font-size: 1.6rem; letter-spacing: -0.01em; }
   main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; padding: 24px; max-width: 1800px; }
   iframe { width: 100%; height: 720px; border: 2px solid var(--rule); border-radius: 4px; display: block; }
-  aside { display: grid; gap: 16px; align-content: start; }
+  aside { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; min-width: 0; }
   h2 { font-size: 1.25rem; margin: 0 0 6px; }
   p { margin: 0 0 8px; color: var(--muted); }
   textarea { width: 100%; height: 190px; font: 13px/1.45 ui-monospace, Consolas, monospace; padding: 10px; border: 2px solid var(--rule); border-radius: 4px; }
   button { font: inherit; font-weight: 600; height: 40px; padding: 0 14px; border: 2px solid var(--navy); border-radius: 4px; background: #fff; color: var(--navy); cursor: pointer; margin: 0 6px 6px 0; }
   button:hover { background: var(--navy); color: #fff; }
-  pre { margin: 0; height: 260px; overflow: auto; background: var(--navy); color: #fff; padding: 10px 12px; border-radius: 4px; font: 12px/1.5 ui-monospace, Consolas, monospace; white-space: pre-wrap; }
+  pre { margin: 0; height: 260px; overflow: auto; overflow-wrap: anywhere; background: var(--navy); color: #fff; padding: 10px 12px; border-radius: 4px; font: 12px/1.5 ui-monospace, Consolas, monospace; white-space: pre-wrap; }
   code { font-family: ui-monospace, Consolas, monospace; font-size: 0.88em; }
   @media (max-width: 1000px) { main { grid-template-columns: 1fr; } iframe { height: 900px; } }
 </style>
