@@ -1,0 +1,12 @@
+Recorded instrument sounds used by the music tool
+
+Grand piano (sounds/piano): Salamander Grand Piano V3 by Alexander Holm, recorded from a Yamaha C5.
+Licence: Creative Commons Attribution 3.0, https://creativecommons.org/licenses/by/3.0/
+Source: https://archive.org/details/SalamanderGrandPianoV3 (MP3 edition by Jan Forst, npm @audio-samples/piano-mp3-velocity8)
+
+Organ (sounds/organ) and flute (sounds/flute): Fluid R3 General MIDI SoundFont by Frank Wen, rendered by
+Benjamin Gleitzman (github.com/gleitz/midi-js-soundfonts). Licence: Creative Commons Attribution 3.0,
+https://creativecommons.org/licenses/by/3.0/us/
+
+Changes: every third note from C2 to C7 kept, converted to mono MP3; piano notes cut to five seconds with a
+one-second fade at the end.
