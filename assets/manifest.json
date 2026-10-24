@@ -1,0 +1,5 @@
+{
+  "note": "Placeholder graphics. Replace any file here with your own artwork using the same file name; nothing in the code needs to change. Icons are drawn as masks, so they take the button's text colour automatically.",
+  "logo": "assets/logo.svg",
+  "icons": ["record", "play", "stop", "save", "clear", "listen", "copy", "text", "left", "right", "tick", "volume"]
+}

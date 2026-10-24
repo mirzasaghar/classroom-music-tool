@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embedding the music tool</title>
+<style>
+  :root { --tray: #1f4ba5; --navy: #14213d; --rule: #14213d; --muted: #4b4b4b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 "Segoe UI", system-ui, sans-serif; color: var(--navy); background: #fff; }
+  header { background: var(--tray); color: #fff; padding: 14px 24px; }
+  header h1 { margin: 0; font-size: 1.6rem; letter-spacing: -0.01em; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; padding: 24px; max-width: 1800px; }
+  iframe { width: 100%; height: 720px; border: 2px solid var(--rule); border-radius: 4px; display: block; }
+  aside { display: grid; gap: 16px; align-content: start; }
+  h2 { font-size: 1.25rem; margin: 0 0 6px; }
+  p { margin: 0 0 8px; color: var(--muted); }
+  textarea { width: 100%; height: 190px; font: 13px/1.45 ui-monospace, Consolas, monospace; padding: 10px; border: 2px solid var(--rule); border-radius: 4px; }
+  button { font: inherit; font-weight: 600; height: 40px; padding: 0 14px; border: 2px solid var(--navy); border-radius: 4px; background: #fff; color: var(--navy); cursor: pointer; margin: 0 6px 6px 0; }
+  button:hover { background: var(--navy); color: #fff; }
+  pre { margin: 0; height: 260px; overflow: auto; background: var(--navy); color: #fff; padding: 10px 12px; border-radius: 4px; font: 12px/1.5 ui-monospace, Consolas, monospace; white-space: pre-wrap; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 0.88em; }
+  @media (max-width: 1000px) { main { grid-template-columns: 1fr; } iframe { height: 900px; } }
+</style>
+</head>
+<body>
+<header><h1>Example lesson page with the music tool embedded</h1></header>
+<main>
+  <iframe id="tool" src="./index.html" title="Music tool" allow="autoplay"></iframe>
+  <aside>
+    <section>
+      <h2>Send a challenge</h2>
+      <p>This is what your backend would send. Notes are names like <code>E4</code> or <code>F#4</code>, with lengths in beats.</p>
+      <textarea id="challenge">{
+  "id": "lesson-3-warm-up",
+  "title": "Lesson 3 warm-up",
+  "prompt": "Listen, then play the five notes back.",
+  "tempo": 96,
+  "notes": [
+    { "note": "C4", "beats": 1 },
+    { "note": "D4", "beats": 1 },
+    { "note": "E4", "beats": 1 },
+    { "note": "F4", "beats": 1 },
+    { "note": "G4", "beats": 2 }
+  ]
+}</textarea>
+      <button id="send">Start this challenge</button><button id="stop">Stop challenge</button><button id="get">Ask for the sequence</button>
+    </section>
+    <section>
+      <h2>Events from the tool</h2>
+      <p>Every note, recording, challenge result and MP3 export arrives here as a message.</p>
+      <pre id="log"></pre>
+    </section>
+  </aside>
+</main>
+<script>
+  const frame = document.getElementById("tool");
+  const log = document.getElementById("log");
+  const send = (msg) => frame.contentWindow.postMessage({ source: "music-tool-host", ...msg }, "*");
+  const write = (line) => { log.textContent += line + "\n"; log.scrollTop = log.scrollHeight; };
+
+  window.addEventListener("message", (e) => {
+    if (!e.data || e.data.source !== "music-tool") return;
+    const { type, detail } = e.data;
+    if (type === "export") write(`export: ${detail.filename}, ${detail.mp3.byteLength} bytes, ${detail.events.length} notes`);
+    else if (type === "note") write(`note: ${detail.name}`);
+    else write(`${type}: ${JSON.stringify(detail)}`);
+  });
+
+  document.getElementById("send").onclick = () => {
+    try {
+      send({ type: "start-challenge", challenge: JSON.parse(document.getElementById("challenge").value) });
+    } catch (err) {
+      write(`Not valid JSON: ${err.message}`);
+    }
+  };
+  document.getElementById("stop").onclick = () => send({ type: "stop-challenge" });
+  document.getElementById("get").onclick = () => send({ type: "get-sequence" });
+</script>
+</body>
+</html>
