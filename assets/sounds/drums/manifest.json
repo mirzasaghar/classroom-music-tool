@@ -1,0 +1,174 @@
+{
+ "kick": {
+  "1": [
+   "kick_v1_t1.mp3",
+   "kick_v1_t2.mp3"
+  ],
+  "2": [
+   "kick_v2_t1.mp3",
+   "kick_v2_t2.mp3"
+  ],
+  "3": [
+   "kick_v3_t1.mp3",
+   "kick_v3_t2.mp3"
+  ],
+  "4": [
+   "kick_v4_t1.mp3",
+   "kick_v4_t2.mp3"
+  ]
+ },
+ "snare": {
+  "1": [
+   "snare_v1_t1.mp3",
+   "snare_v1_t2.mp3"
+  ],
+  "2": [
+   "snare_v2_t1.mp3",
+   "snare_v2_t2.mp3"
+  ],
+  "3": [
+   "snare_v3_t1.mp3",
+   "snare_v3_t2.mp3"
+  ],
+  "4": [
+   "snare_v4_t1.mp3",
+   "snare_v4_t2.mp3"
+  ]
+ },
+ "rimshot": {
+  "1": [
+   "rimshot_v1_t1.mp3"
+  ],
+  "2": [
+   "rimshot_v2_t1.mp3"
+  ],
+  "3": [
+   "rimshot_v3_t1.mp3"
+  ]
+ },
+ "sidestick": {
+  "1": [
+   "sidestick_v1_t1.mp3"
+  ],
+  "2": [
+   "sidestick_v2_t1.mp3"
+  ],
+  "3": [
+   "sidestick_v3_t1.mp3"
+  ]
+ },
+ "tom_high": {
+  "1": [
+   "tom_high_v1_t1.mp3"
+  ],
+  "2": [
+   "tom_high_v2_t1.mp3"
+  ],
+  "3": [
+   "tom_high_v3_t1.mp3"
+  ],
+  "4": [
+   "tom_high_v4_t1.mp3"
+  ]
+ },
+ "tom_floor": {
+  "1": [
+   "tom_floor_v1_t1.mp3"
+  ],
+  "2": [
+   "tom_floor_v2_t1.mp3"
+  ],
+  "3": [
+   "tom_floor_v3_t1.mp3"
+  ],
+  "4": [
+   "tom_floor_v4_t1.mp3"
+  ]
+ },
+ "hh_closed": {
+  "1": [
+   "hh_closed_v1_t1.mp3",
+   "hh_closed_v1_t2.mp3"
+  ],
+  "2": [
+   "hh_closed_v2_t1.mp3",
+   "hh_closed_v2_t2.mp3"
+  ],
+  "3": [
+   "hh_closed_v3_t1.mp3",
+   "hh_closed_v3_t2.mp3"
+  ],
+  "4": [
+   "hh_closed_v4_t1.mp3",
+   "hh_closed_v4_t2.mp3"
+  ]
+ },
+ "hh_open": {
+  "1": [
+   "hh_open_v1_t1.mp3",
+   "hh_open_v1_t2.mp3"
+  ],
+  "2": [
+   "hh_open_v2_t1.mp3",
+   "hh_open_v2_t2.mp3"
+  ],
+  "3": [
+   "hh_open_v3_t1.mp3",
+   "hh_open_v3_t2.mp3"
+  ],
+  "4": [
+   "hh_open_v4_t1.mp3",
+   "hh_open_v4_t2.mp3"
+  ]
+ },
+ "hh_pedal": {
+  "1": [
+   "hh_pedal_v1_t1.mp3"
+  ],
+  "2": [
+   "hh_pedal_v2_t1.mp3"
+  ],
+  "3": [
+   "hh_pedal_v3_t1.mp3"
+  ]
+ },
+ "crash": {
+  "1": [
+   "crash_v1_t1.mp3",
+   "crash_v1_t2.mp3"
+  ],
+  "2": [
+   "crash_v2_t1.mp3",
+   "crash_v2_t2.mp3"
+  ],
+  "3": [
+   "crash_v3_t1.mp3",
+   "crash_v3_t2.mp3"
+  ]
+ },
+ "ride": {
+  "1": [
+   "ride_v1_t1.mp3",
+   "ride_v1_t2.mp3"
+  ],
+  "2": [
+   "ride_v2_t1.mp3",
+   "ride_v2_t2.mp3"
+  ],
+  "3": [
+   "ride_v3_t1.mp3",
+   "ride_v3_t2.mp3"
+  ]
+ },
+ "ride_bell": {
+  "1": [
+   "ride_bell_v1_t1.mp3"
+  ],
+  "2": [
+   "ride_bell_v2_t1.mp3"
+  ],
+  "3": [
+   "ride_bell_v3_t1.mp3"
+  ]
+ }
+}

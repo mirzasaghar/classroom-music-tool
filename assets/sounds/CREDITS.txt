@@ -10,3 +10,12 @@ https://creativecommons.org/licenses/by/3.0/us/
 
 Changes: every third note from C2 to C7 kept, converted to mono MP3; piano notes cut to five seconds with a
 one-second fade at the end.
+
+Drum kit (sounds/drums): Virtuosity Drums by Versilian Studios and Karoryfer Samples, recorded
+with close, overhead and room microphones. Licence: CC0 1.0 (public domain dedication),
+https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://github.com/sfzinstruments/virtuosity_drums
+
+Changes to the drums: the close, overhead and room microphones mixed to one stereo file per hit (room at
+about a third), up to four velocity layers and two alternate takes per piece, cut to length with a fade,
+converted to MP3. The level of each piece is set in drums/gains.json.
